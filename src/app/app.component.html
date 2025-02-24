@@ -1,0 +1,111 @@
+<div class="base-container">
+  <div class="heading">
+    LOQO HİSSƏLƏRİNİ <br />
+    BİRLƏŞDİRİN VƏ HƏDİYYƏ QAZANIN!
+  </div>
+  <div class="root">
+    <div class="root-body">
+      <svg
+      (click)="logoPartClick($event)"
+      width="80%" height="80%"
+      viewBox="0 0 754 754"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M112.5 245.19V248.812L115.061 246.25L155.59 205.704L160.273 210.413L160.276 210.416L277.898 328.061L278.337 328.5L278.959 328.5L326.985 328.485L328.485 328.485L328.485 326.985L328.5 114L328.5 112.5H327H114H112.5V114V245.19Z"
+        fill="white"
+        fill-opacity="0"
+        stroke="white"
+        stroke-width="3"
+        id="p1"
+      />
+      <path
+        d="M3.93752 375.973L2.88203 377.032L3.9378 378.091L96.6362 471.059L99.1984 473.629V470V412.564L272.093 412.549L272.715 412.549L273.155 412.108L307.062 378.091L308.118 377.032L307.063 375.973L156.578 224.941L155.515 223.875L154.453 224.941L3.93752 375.973Z"
+        fill="white"
+        fill-opacity="0"
+        stroke="white"
+        stroke-width="3"
+        id="p2"
+      />
+      <path
+        d="M112.5 640V641.5H114H245.166H248.786L246.227 638.94L210.425 603.126L210.424 603.125L205.739 598.427L328.061 476.114L328.5 475.675V475.053V427V425.5L327 425.5L114 425.515L112.5 425.515V427.015V640Z"
+        stroke="white"
+        fill="white"
+        fill-opacity="0"
+        stroke="white"
+        stroke-width="3"
+        id="p3"
+      />
+      <path
+        d="M376.316 750.06L377.377 751.122L378.438 750.06L471.061 657.361L473.62 654.799L470 654.8L412.787 654.815L412.802 481.918L412.802 481.296L412.363 480.857L378.438 446.939L377.377 445.878L376.316 446.94L225.939 597.432L224.88 598.492L225.939 599.553L376.316 750.06Z"
+        fill="white"
+        fill-opacity="0"
+        stroke="white"
+        stroke-width="3"
+        id="p4"
+      />
+      <path
+        d="M640 641.5L641.5 641.5V640V508.804V505.182L638.939 507.744L603.121 543.575L603.119 543.576L598.435 548.248L593.751 543.576L593.749 543.575L476.106 425.939L475.666 425.5H475.045H427H425.5V427V639.985V641.485L427 641.485L640 641.5Z"
+        fill="white"
+        fill-opacity="0"
+        stroke="white"
+        stroke-width="3"
+        id="p5"
+      />
+      <path
+        d="M750.06 377.663L751.122 376.602L750.06 375.541L657.371 282.939L654.811 280.381V284V341.254H481.919H481.298L480.859 341.693L446.94 375.555L445.877 376.617L446.94 377.678L597.44 528.061L598.5 529.121L599.56 528.061L750.06 377.663Z"
+        fill="white"
+        stroke="white"
+        fill-opacity="0"
+        stroke-width="3"
+        id="p6"
+      />
+      <path
+        d="M641.5 114V112.5H640H508.825H505.202L507.765 115.061L543.583 150.849L543.585 150.851L548.271 155.55L543.584 160.249L543.583 160.251L425.939 277.879L425.5 278.319V278.94V327V328.5H427H640H641.5V327V114Z"
+        fill="white"
+        stroke="white"
+        stroke-width="3"
+        fill-opacity="0"
+        id="p7"
+      />
+      <path
+        d="M529.059 156.57L530.125 155.508L529.059 154.445L378.078 3.93766L377.019 2.88204L375.96 3.93761L282.941 96.6556L280.368 99.2199L284.001 99.218L341.44 99.1888L341.455 272.061L341.455 272.684L341.896 273.123L375.96 307.063L377.019 308.118L378.078 307.062L529.059 156.57Z"
+        fill="white"
+        stroke="white"
+        stroke-width="3"
+        fill-opacity="0"
+        id="p8"
+      />
+    </svg>
+    </div>
+    <div class="root-navigation">
+      <div class="navigation-title">HİSSƏLƏRİ DÜZGÜN TƏYİN EDİN</div>
+      <div class="navigation-list">
+        <ng-container *ngFor="let item of shuffledItems">
+          <div class="navigation-item" (click)="onSelectPart($event)">
+            <img [src]="item.img" [attr.data-id]="item.id"  class="img-fluid" />
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <div class="logo">
+    <img src="assets/images/logo/logo-pasha.svg" class="img-fluid" alt="logo" />
+    <img
+      src="assets/images/logo/logo-onveiv.svg"
+      class="img-fluid"
+      alt="logo"
+    />
+  </div>
+</div>
+
+<div class="congratulation-modal" id="modal">
+  <div class="congratulation-modal-container">
+    <h1 class="congratulation-title">TƏBRİKLƏR !</h1>
+    <div class="congratulation-animation">
+      <img src="assets/images/confetti.gif" width="250px">
+    </div>
+    <a href="javascript:void(0)" (click)="closeModal()" class="congratulation-btn">YENİDƏN BAŞLA</a>
+  </div>
+</div>
